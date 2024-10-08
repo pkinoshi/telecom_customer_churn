@@ -1,6 +1,8 @@
-import streamlit as st
+import numpy as np
 import pandas as pd
+import sklearn
 import pickle
+import streamlit as st
 
 # Load the pre-trained model
 with open('best_XGB_model.pkl', 'rb') as f:
