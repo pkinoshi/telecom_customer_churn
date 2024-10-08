@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import sklearn
+from xgboost import XGBClassifier
 import pickle
 import streamlit as st
 
