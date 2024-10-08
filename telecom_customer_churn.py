@@ -63,7 +63,7 @@ def apply_custom_css():
             background: linear-gradient(90deg, #007BFF 0%, #00BFFF 100%);
         }
         .stSlider .slider-handle {
-            background-color: "blue" !important;
+            background-color: #00BFFF !important;
             border-color: #00BFFF !important;
         }
         input, select {
