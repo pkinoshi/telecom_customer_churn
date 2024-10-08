@@ -5,6 +5,7 @@ from xgboost import XGBClassifier
 import pickle
 import streamlit as st
 
+
 # Load the pre-trained model
 with open('best_XGB_model.pkl', 'rb') as f:
     model = pickle.load(f)
@@ -12,28 +13,28 @@ with open('best_XGB_model.pkl', 'rb') as f:
 # Set a modern app layout
 st.set_page_config(page_title="Telecom Customer Churn Prediction", page_icon="📊", layout="wide")
 
-# Apply custom CSS for dark theme with blue sliders
+# Apply custom CSS for a white theme with blue sliders
 def apply_custom_css():
     st.markdown(
         """
         <style>
         /* Set global background and text colors */
         .reportview-container {
-            background-color: black;
-            color: white;
+            background-color: white;  /* Change to white background */
+            color: black;  /* Change text color to black */
         }
         .sidebar .sidebar-content {
-            background-color: #333;
+            background-color: #f7f7f7;  /* Light gray sidebar background */
         }
         .main-header {
             font-family: 'Helvetica Neue', sans-serif;
             font-size: 36px;
             font-weight: bold;
             margin-bottom: 20px;
-            color: #00BFFF;
+            color: #007BFF;  /* Adjusted header color to blue */
         }
         .stButton button {
-            background-color: #007BFF;
+            background-color: #007BFF;  /* Blue button */
             color: white;
             border-radius: 8px;
             padding: 0.8rem 1.5rem;
@@ -41,14 +42,14 @@ def apply_custom_css():
             font-weight: bold;
         }
         .stButton button:hover {
-            background-color: #0056b3;
+            background-color: #0056b3;  /* Darker blue on hover */
         }
         .stMarkdown h3 {
-            color: #5A5A5A;
+            color: #333;  /* Dark gray for subheadings */
             font-size: 22px;
         }
         .info-text {
-            color: #CCCCCC;
+            color: #666;  /* Medium gray for info text */
             font-size: 14px;
             margin-bottom: 10px;
         }
@@ -56,37 +57,37 @@ def apply_custom_css():
             font-size: 24px;
             font-weight: bold;
             margin-top: 20px;
-            color: #00BFFF;
+            color: #007BFF;  /* Blue section headers */
         }
         /* Slider Styles */
         .stSlider > div:first-child {
             background: linear-gradient(90deg, #007BFF 0%, #00BFFF 100%);
         }
         .stSlider .slider-handle {
-            background-color: #00BFFF !important;
-            border-color: #00BFFF !important;
+            background-color: #007BFF !important;  /* Blue slider handle */
+            border-color: #0056b3 !important;  /* Darker blue border */
         }
         input, select {
-            color: white !important;
-            background-color: #444 !important;
-            border: 1px solid #555 !important;
+            color: black !important;  /* Change input text color to black */
+            background-color: #f0f0f0 !important;  /* Light gray for inputs */
+            border: 1px solid #ccc !important;  /* Light gray border */
         }
         .stNumberInput input, .stTextInput input {
-            background-color: #222 !important;
-            color: white !important;
+            background-color: #fff !important;  /* White input background */
+            color: black !important;  /* Black text color */
             border-radius: 5px !important;
-            border: 1px solid #555 !important;
+            border: 1px solid #ccc !important;  /* Light gray border */
         }
         .stSelectbox select, .stSelectbox {
-            background-color: #222 !important;
-            color: white !important;
+            background-color: #fff !important;  /* White background */
+            color: black !important;  /* Black text color */
         }
         .stTextArea textarea {
-            background-color: #222 !important;
-            color: white !important;
+            background-color: #fff !important;  /* White background */
+            color: black !important;  /* Black text color */
         }
         .stMarkdown div, p, span {
-            color: #CCCCCC !important;
+            color: #333 !important;  /* Dark gray for markdown text */
         }
         </style>
         """,
