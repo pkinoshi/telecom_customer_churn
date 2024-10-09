@@ -33,7 +33,7 @@ In today’s hyper-competitive telecom market, retaining customers is just as im
 
 ✅ Build a Predictive Churn Model: Your data is your most powerful asset. Use AI and machine learning to predict which customers are likely to leave. Don’t wait for churn to happen—predict it, prevent it.
 
-🚨 We’ve built a model to do exactly that.
+🚨 I’ve built a model to do exactly that.
 
 ✨ Key Highlights:
 
